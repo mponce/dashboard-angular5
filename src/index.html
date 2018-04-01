@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Bootstrap core CSS -->
+  <!--<link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/html" 
+        href="main.css">
+
+  <title>Dashboard</title>
+  <base href="/">
+</head>
+
+<body>
+  <!-- header navbar -->
+  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+    <input class="form-control form-control-dark w-100" type="text"
+           placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Sign out</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- main body -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- sidebar -->
+      <div id="sidebar"><app-sidebar></app-sidebar></div>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+        <!-- content -->
+        <app-topchart></app-topchart>
+        <app-charttable></app-charttable>
+      </main>
+    </div>
+  </div>
+  <!--
+    This HTML file is a template.
+    If you open it directly in the browser, you will see an empty page.
+
+    You can add webfonts, meta tags, or analytics to this file.
+    The build step will place the bundled scripts into the <body> tag.
+
+    To begin the development, run `npm start` or `yarn start`.
+    To create a production bundle, use `npm run build` or `yarn build`.
+  -->
+</body>
+</html>
+

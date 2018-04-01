@@ -1,0 +1,61 @@
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+
+    .nav-link {
+        font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 500;
+        color: #333;
+    }
+
+    .nav-link .feather {
+        margin-right: 4px;
+        color: #999;
+    }
+
+    .nav-link.active {
+        color: #007bff;
+    }
+
+    .nav-link:hover .feather,
+    .nav-link.active .feather {
+        color: inherit;
+    }
+}
+
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 48px; /* Height of navbar */
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.sidebar-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  margin-bottom: -2px;
+  color: #999;
+}
+
+.sidebar-icon:hover {
+  stroke: #000;
+}
