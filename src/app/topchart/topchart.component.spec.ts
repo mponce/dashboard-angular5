@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClient } from '@angular/common/http';
+import { DataService } from '../data.service';
 import { TopchartComponent } from './topchart.component';
+
+// mock data service
+class MockDataService extends DataService {};
 
 describe('TopchartComponent', () => {
   let component: TopchartComponent;
@@ -8,7 +13,16 @@ describe('TopchartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopchartComponent ]
+      imports: [RouterTestingModule],
+      declarations: [ TopchartComponent ],
+      providers: [{
+        provide: DataService,
+        useClass: MockDataService
+      },
+      {
+        provide: HttpClient
+      }
+      ]
     })
     .compileComponents();
   }));

@@ -2,19 +2,19 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DataService } from '../data.service';
-import { CharttableComponent } from './charttable.component';
+import { SidebarComponent } from './sidebar.component';
 
 // mock data service
 class MockDataService extends DataService {};
 
-describe('CharttableComponent', () => {
-  let component: CharttableComponent;
-  let fixture: ComponentFixture<CharttableComponent>;
+describe('SidebarComponent', () => {
+  let component: SidebarComponent;
+  let fixture: ComponentFixture<SidebarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [ CharttableComponent ],
+      declarations: [ SidebarComponent ],
       providers: [{
         provide: DataService,
         useClass: MockDataService
@@ -28,7 +28,7 @@ describe('CharttableComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CharttableComponent);
+    fixture = TestBed.createComponent(SidebarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
