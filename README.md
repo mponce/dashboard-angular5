@@ -4,7 +4,7 @@ This is a basic Bootstrap template derived from [bootstrap dashboard](https://ge
 
 It is structured as an angular5 app with some basic components.
 
-![Screenshot](/doc/screenshot.png)
+![Screenshot](/doc/app-screenshot.png)
 
 ## clone it
 
