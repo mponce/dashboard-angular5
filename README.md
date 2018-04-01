@@ -4,7 +4,7 @@ This is a basic Bootstrap template derived from [bootstrap dashboard](https://ge
 
 It is structured as an angular5 app with some basic components.
 
-![Screenshot](https://raw.githubusercontent.com/mponce/dashboard-angular5/master/doc/screenshot.png)
+![Screenshot](/doc/screenshot.png)
 
 ## clone it
 
