@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-topchart',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopchartComponent implements OnInit {
 
-  constructor() { }
+  chartData = [];
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getChartData().subscribe(res => {
+        console.log(res);
+    })
   }
 
 }

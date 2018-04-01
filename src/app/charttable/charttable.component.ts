@@ -8,10 +8,12 @@ import { DataService } from '../data.service';
 })
 export class CharttableComponent implements OnInit {
 
+  tableData = [];
+
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.tableData = this.dataService.getTableData();
+    this.dataService.getTableData().subscribe(data => this.tableData = data);
   }
 
 }

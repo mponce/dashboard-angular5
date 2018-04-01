@@ -1,29 +1,21 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DataService {
 
-  constructor() { }
+  constructor(private _http: HttpClient) { }
 
-  tableData = [
-    {
-      "field1": 1001,
-      "field2": "Lorem",
-      "field3": "ipsum",
-      "field4": "dolor",
-      "field5": "sit"
-    },
-    {
-      "field1": 1002,
-      "field2": "Lorem",
-      "field3": "ipsum",
-      "field4": "dolor",
-      "field5": "sit"
-    }
-  ];
+  getTableData(): Observable<any> {
+    return this._http.get("./assets/table_data.json")
+      .map(result => result);
+  }
 
-  getTableData() {
-    return this.tableData;
+  getChartData(): Observable<any> {
+    return this._http.get("./assets/table_data.json")
+      .map(result => result);
   }
 
 }
